@@ -1,0 +1,114 @@
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  background-color: burlywood;
+  .header{
+    width:100%;
+    ul {
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    li {
+      float: left;
+      width: 25%;
+      list-style-type: none;
+    }
+  
+    a {
+      display: block;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #f57;
+      color: #fff;
+    }
+  
+    a:hover {
+      background-color: #f7a;
+    }
+  }
+
+  .main {
+    margin: 0 auto;
+    background-image: url(8Q1A6936-1536x1024.jpg);
+    border: 1px solid black;
+    // float: left;
+    // flex-wrap: wrap;
+    // display: flex;
+    &__message{
+      padding: 40px;
+      color:#ffa500;
+      font-size:30px;
+      text-align: center;
+      margin: auto;
+    }
+    &__btns{
+      height:900px;
+      flex-wrap: wrap;
+      display: flex;
+      &__btn{
+        display: block;
+        height: 80px;
+        width :360px;
+        margin:0 auto 50px;
+        border-radius: 10px;
+        font-size:20px;
+        color:#fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 80px;
+        &--icon{
+          padding-right:20px;
+        }
+        &--facebook{
+          background-color: #4169e1;
+        }
+        &--twitter{
+          background-color: #00bfff;
+        }
+        &--instagram{
+          background-color: #fc76bf;
+        }
+        &--qiita{
+          background-color: #4169e1;
+        }
+        &--teratail{
+          background-color: palegoldenrod;
+        }
+        &--newspicks{
+          background-color: peru;
+        }
+        &--github{
+          background-color: purple;
+        }
+        &--slack{
+          background-color: palegreen;
+        }
+        &--aws{
+          background-color: blue;
+        }
+        &--heroku{
+          background-color: brown;
+        }
+        &--stackoverflow{
+          background-color: gray;
+        }
+        &--google{
+          background-color: burlywood;
+        }
+      }
+    }
+  }
+}
+.clearfix{
+  clear:both;
+}
+.footer{
+  background-color: black;
+  height: 60px;
+  width:100%;
+  bottom:0;
+}

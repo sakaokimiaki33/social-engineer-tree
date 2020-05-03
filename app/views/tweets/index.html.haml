@@ -1,0 +1,31 @@
+.header
+  .header__bar.row
+    %h1.grid-6
+      %a{:href => "/"} Social-Engineer-Tree
+    .user_nav.grid-6
+      %a.post{:href => "/tweets/new"} 投稿する
+  = yield
+.contents
+  - @tweets.each do |tweet|
+    .content_post{:style => "background-image: url(#{tweet.image});"}
+      .more
+        %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li
+            = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+          %li
+            = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+          %li
+            = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+      = simple_format(tweet.text)
+      %span.name
+        = tweet.name
+
+      -# .content__post__box
+      -#   %p.sentense 
+      -#     = tweet.text
+      -#   %span.name
+      -#     = tweet.name
+.footer
+  %p
+    Copyright social-engineer-tree 2020.

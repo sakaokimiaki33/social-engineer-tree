@@ -1,0 +1,68 @@
+.header
+  %ul
+    %li
+      %a{:href => "contacts/contact"} コンタクト
+    %li
+      %a{:href => "#"} ポートフォリオ
+    %li
+      %a{:href => "forms/new"} 問い合わせ
+    %li
+      %a{:href => "tweets/index"} 投稿
+
+.main 
+  .main__message 
+    エンジニアにとって便利なサイトの一覧
+  .main__btns
+    = link_to "https://www.facebook.com/", class: "main__btns__btn  main__btns__btn--facebook"  do
+      = icon('fa', 'facebook-square', class: "main__btns__btn--icon")
+      %span<>
+      Facebook 
+    = link_to "https://twitter.com/", class: "main__btns__btn  main__btns__btn--twitter" do
+      = icon('fa', 'twitter', class: "main__btns__btn--icon")
+      %span<>
+      Twitter 
+    = link_to "https://instagram.com/", class: "main__btns__btn  main__btns__btn--instagram" do 
+      = icon('fa', 'instagram', class: "main__btns__btn--icon")
+      %span<>
+      Instagram 
+    = link_to "https://qiita.com/", class: "main__btns__btn  main__btns__btn--qiita" do
+      = icon('fa', 'bahai', class: "main__btns__btn--icon")
+      %span<>
+      Qiita 
+    = link_to "https://teratail.com/", class: "main__btns__btn  main__btns__btn--teratail" do
+      = icon('fa', 'tablet', class: "main__btns__btn--icon")
+      %span<>
+      Teratail 
+    = link_to "https://newspicks.com/", class: "main__btns__btn  main__btns__btn--newspicks" do
+      = icon('fa', 'battle-net', class: "main__btns__btn--icon")
+      %span<>
+      Newspicks 
+    = link_to "https://github.com/", class: "main__btns__btn  main__btns__btn--github" do
+      = icon('fa', 'github-square', class: "main__btns__btn--icon")
+      %span<>
+      Github 
+    = link_to "https://slack.com/", class: "main__btns__btn  main__btns__btn--slack" do 
+      = icon('fa', 'slack', class: "main__btns__btn--icon")
+      %span<>
+      Slack 
+    = link_to "https://aws.amazon.com/jp/", class: "main__btns__btn  main__btns__btn--aws" do  
+      %i.fab.fa-aws
+      %span<>
+      AWS 
+    = link_to "https://jp.heroku.com/", class: "main__btns__btn  main__btns__btn--heroku" do  
+      = icon('fa', 'mask', class: "main__btns__btn--icon")
+      %span<>
+      Heroku 
+    = link_to "https://stackoverflow.com/", class: "main__btns__btn  main__btns__btn--stackoverflow" do   
+      = icon('fab', 'stack-overflow', class: "main__btns__btn--icon")
+      %span<>
+      Stackoverflow
+    = link_to "https://www.google.com/", class: "main__btns__btn  main__btns__btn--google" do   
+      = icon('fab', 'google', class: "main__btns__btn--icon")
+      %span<>
+      Google
+.clearfix
+.footer
+  %p
+    Copyright social-engineer-tree 2020.
+

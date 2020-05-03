@@ -1,0 +1,56 @@
+%section#contact
+  %h1.section-header CONTACT
+  .contact-wrapper
+    /
+      \--------------
+      
+      CONTACT PAGE LEFT
+      
+      \---------------
+    %form.form-horizontal{:action => "contact.php", :method => "post", :role => "form"}
+      .form-group
+        .col-sm-12
+          %input#name.form-control{:name => "name", :placeholder => "NAME", :type => "text", :value => ""}/
+      .form-group
+        .col-sm-12
+          %input#email.form-control{:name => "email", :placeholder => "EMAIL", :type => "email", :value => ""}/
+      %textarea.form-control{:name => "message", :placeholder => "MESSAGE", :rows => "10"}
+      %button#submit.btn.btn-primary.send-button{:type => "submit", :value => "SEND"}
+        .button
+          %i.fa.fa-paper-plane
+          %span.send-text SEND
+    /
+      \--------------
+      
+      CONTACT PAGE RIGHT
+      
+      \---------------
+    .direct-contact-container
+      %ul.contact-list
+        %li.list-item
+          %i.fa.fa-map-marker.fa-2x
+            %span.contact-text.place Seattle | WA
+        %li.list-item
+          %i.fa.fa-phone.fa-2x
+            %span.contact-text.phone
+              %a{:href => "tel:080-1920-2407", :title => "連絡先はこちら"} (080) 1920-2407
+        %li.list-item
+          %i.fa.fa-envelope.fa-2x
+            %span.contact-text.gmail
+              %a{:href => "mailto:#", :title => "メールアドレス"} sakaokimiaki33@yahoo.co.jp
+      %hr/
+      %ul.social-media-list
+        %li
+          %a.contact-icon{:href => "#", :target => "_blank"}
+            %i.fa.fa-github{"aria-hidden" => "true"}
+        %li
+          %a.contact-icon{:href => "#", :target => "_blank"}
+            %i.fa.fa-twitter{"aria-hidden" => "true"}
+        %li
+          %a.contact-icon{:href => "#", :target => "_blank"}
+            %i.fa.fa-instagram{"aria-hidden" => "true"}
+        %li
+          %a.contact-icon{:href => "#", :target => "_blank"}
+            %i.fa.fa-codepen{"aria-hidden" => "true"}
+      %hr/
+      .copyright © ALL OF THE RIGHTS RESERVED
