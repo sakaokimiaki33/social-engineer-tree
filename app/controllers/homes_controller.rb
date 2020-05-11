@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
-  def index
+  def top
+    render "homes/index"
   end
 end

@@ -67,3 +67,4 @@ gem "font-awesome-sass"
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem 'sass-rails', '>= 3.2'
+gem 'devise'

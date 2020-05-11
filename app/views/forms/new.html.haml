@@ -1,5 +1,6 @@
 %section#contact
-  %h1.section-header CONTACT
+  %h1.section-header お問い合わせ
+  %a{:href => "/"} Social-Engineer-Tree
   .contact-wrapper
     /
       \--------------
@@ -10,15 +11,15 @@
     %form.form-horizontal{:action => "contact.php", :method => "post", :role => "form"}
       .form-group
         .col-sm-12
-          %input#name.form-control{:name => "name", :placeholder => "NAME", :type => "text", :value => ""}/
+          %input#name.form-control{:name => "name", :placeholder => "名前", :type => "text", :value => ""}/
       .form-group
         .col-sm-12
-          %input#email.form-control{:name => "email", :placeholder => "EMAIL", :type => "email", :value => ""}/
-      %textarea.form-control{:name => "message", :placeholder => "MESSAGE", :rows => "10"}
+          %input#email.form-control{:name => "email", :placeholder => "アドレス", :type => "email", :value => ""}/
+      %textarea.form-control{:name => "message", :placeholder => "本文", :rows => "10"}
       %button#submit.btn.btn-primary.send-button{:type => "submit", :value => "SEND"}
         .button
           %i.fa.fa-paper-plane
-          %span.send-text SEND
+          %span.send-text 送信
     /
       \--------------
       
@@ -29,7 +30,7 @@
       %ul.contact-list
         %li.list-item
           %i.fa.fa-map-marker.fa-2x
-            %span.contact-text.place Seattle | WA
+            %span.contact-text.place japan osaka
         %li.list-item
           %i.fa.fa-phone.fa-2x
             %span.contact-text.phone
