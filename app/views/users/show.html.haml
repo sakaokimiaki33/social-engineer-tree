@@ -19,12 +19,8 @@
 .contents.row
   %a{:href => "/tweets"} 投稿一覧
   - @tweets.each do |tweet|
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      = simple_format(tweet.text)
-      -# %span.name
-      -#   %a{:href => "/users/#{@tweet.user.id}"}
-      -#     %span 投稿者
-      -#     = @tweet.user.nickname
+    = render partial: "contents", locals: { tweet: tweet }
+  = paginate(@tweets)
 .footer
   %p
     Copyright social-engineer-tree 2020.

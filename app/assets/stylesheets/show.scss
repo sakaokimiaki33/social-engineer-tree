@@ -1,7 +1,7 @@
 // index.html.haml対応
 .header {
   border-bottom: 1px solid gray;
-  background-color: whitesmoke;
+  background-color: gray;
   top: 0;
   left: 0;
   right: 0;
@@ -16,17 +16,19 @@
       a {
         display: block;
         text-decoration: none;
+        font-family: cursive;
+        font-size: 30px;
       }
     }
     div.grid-6 {
       float: right;
       text-align: right;
+      margin-right: 20px;
       a.post {
         width: 120px;
         display: inline-left;
         margin-left: 10px;
         text-decoration: none;
-        border: 1px solid blue;
         border-radius: 1px;
       }
     }
@@ -53,7 +55,7 @@
       margin-left: -4px;
       }
       &:hover ul {
-        color: accent;
+        color: blue;
         display: block;
       }
     }
@@ -72,14 +74,15 @@
           padding: 10px 20px;
           text-align: left;
           border-bottom: 1px solid #d8d8d8;
+          text-decoration: none;
         }
       }
      }
 }
 
 .contents {
-  padding-top: 10px;
-  padding-bottom: 1px;
+  // padding-top: 10px;
+  // padding-bottom: 1px;
   background-color:cornsilk;
   width: 100%;
   margin: auto;
@@ -90,17 +93,19 @@
     margin:0 auto;
     background-size: cover;
     position: relative;
+    margin-top: 30px;
   }
 }
 
 .contents2 {
   overflow: hidden;
-  width: 750px;
+  width: 600px;
   height: 300px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   display: flex;
+  opacity: 0.9;
 }
 .nav {
   width: 150px;
@@ -307,6 +312,7 @@ form {
     border: 1px solid gray;
     border-radius: 15px;
     font-family: "游ゴシック", "YuGothic";
+    border: double;
   }
   input[type="submit"] {
     background-color: accent;
@@ -314,6 +320,7 @@ form {
     color: black;
     border: 0;
     font-size: 18px;
+    border: double;
     font-family: "游ゴシック", "YuGothic";
     &:hover {
       background-color: lawngreen;
@@ -322,10 +329,14 @@ form {
 }
 .edit{
   height: 100vh;
-  background-color: cadetblue;
+  background-image: url(ET1UTxGUEAEpQus.jpeg);
   .container {
     box-shadow: 0 0 10px rgba(black,0.2);
     box-sizing: border-box;
+    margin: auto;
+    width: 800px;
+    background-color: black;
+    border-radius: 10px;
   }
 }
 
@@ -345,9 +356,11 @@ form {
 .search-form {
   text-align: center;
   padding-top: 32px;
+  background-color: black;
   .search-input {
     width: 30%;
     margin-right: 10px;
+    border: double;
   }
 
   .search-btn {
