@@ -8,9 +8,14 @@
 .edit
   .container
     = form_with(model: @tweet, local: true) do |form|
-      %h3
-        編集する
-      = form.text_field :image, placeholder: "Image Url"
-      = form.text_area :text, placeholder: "text" , rows: "10"
-      = form.submit "更新する"
+      .waku
+        .toukouwaku1
+          %h3.toukou1
+            編集する
+        .url1 
+          = form.text_field :image, placeholder: "Image Url"
+        .text3
+          = form.text_area :text, placeholder: "text" , rows: "10"
+        .botan1
+          = form.submit "更新する"
 = render "footer" 

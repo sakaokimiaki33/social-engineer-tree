@@ -11,11 +11,12 @@
               = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get 
             %li
               = link_to '削除', "/tweets/#{tweet.id}", method: :delete  
-      = simple_format(tweet.text)
-      %span.name
-        %a{:href => "/users/#{tweet.user.id}"}
-          %span 投稿者
-          = tweet.user.nickname
+  .info         
+    = simple_format(tweet.text)
+    %span.name
+      %a{:href => "/users/#{tweet.user.id}"}
+        %span 投稿者
+        = tweet.user.nickname
 
    
 

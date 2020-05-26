@@ -5,7 +5,7 @@
     .user_nav.grid-6
       %a.post{:href => "/tweets/new"} 投稿する
   = yield
-.contents
+.contents.show
   .content_post{:style => "background-image: url(#{@tweet.image});"}
     - if user_signed_in? && current_user.id == @tweet.user_id
       .contents2
@@ -17,16 +17,20 @@
                 = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
               %li
                 = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-      = simple_format(@tweet.text)
-      %span.name
-        %a{:href => "/users/#{@tweet.user.id}"}
-          %span 投稿者
-          = @tweet.user.nickname
+
+      .info          
+        = simple_format(@tweet.text)
+        %span.name
+          %a{:href => "/users/#{@tweet.user.id}"}
+            %span 投稿者
+            = @tweet.user.nickname
   .container
     - if current_user
       = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
-        = form.text_area :text, placeholder: "コメントする", rows: "2",class: "textbox"
-        = form.submit "コメントする",class: "form__submit"
+        .comment1
+          = form.text_area :text, placeholder: "コメントする", rows: "2",class: "textbox"
+        .comment2
+          = form.submit "コメントする",class: "form__submit"
     - else
       %strong
       %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
@@ -39,4 +43,4 @@
             = link_to comment.user.nickname, "/users/#{comment.user_id}"
           ：
           = comment.text
-  = render "footer" 
+= render "footer" 
