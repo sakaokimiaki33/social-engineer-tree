@@ -5,12 +5,18 @@
     .user_nav.grid-6
       %a.post{:href => "/tweets/new"} 投稿する
   = yield
-.contents.row
+.contents.new
   .container
     = form_with(model: @tweet, local: true) do |form|
-      %h3
-        投稿する
-      = form.text_field :image, placeholder: "Image Url"
-      = form.text_area :text, placeholder: "text" , rows: "10"
-      = form.submit "投稿する"
+      .toukouwaku
+        %h3.toukou
+          投稿する
+      .url 
+        = form.text_field :image, placeholder: "Image Url", id: "image"
+      .text2
+        = form.text_area :text, placeholder: "text" , rows: "10", id: "text"
+      .botan
+        = form.submit "投稿する"
 = render "footer" 
+
+

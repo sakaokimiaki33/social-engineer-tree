@@ -1,7 +1,7 @@
 // index.html.haml対応
 .header {
   border-bottom: 1px solid gray;
-  background-color: gray;
+  background-color:black;
   top: 0;
   left: 0;
   right: 0;
@@ -16,14 +16,16 @@
       a {
         display: block;
         text-decoration: none;
-        font-family: cursive;
+        font-family: 'Fredoka One', cursive;
         font-size: 30px;
+        margin: 10px 20px;
       }
     }
     div.grid-6 {
       float: right;
       text-align: right;
       margin-right: 20px;
+      margin-top: 15px;
       a.post {
         width: 120px;
         display: inline-left;
@@ -43,10 +45,11 @@
     top: 5px;
     display: block;
     float: left;
-    margin-left: 30px;
+    // margin: 13px 20px;
     width: 150px;
     height: 50px;
     font-size: 1em;
+    font-family: 'Fredoka One', cursive;
     cursor: pointer;
     position: relative;
     &:after {
@@ -81,20 +84,35 @@
 }
 
 .contents {
-  // padding-top: 10px;
-  // padding-bottom: 1px;
   background-color:cornsilk;
   width: 100%;
   margin: auto;
-  .content_post{
-    height:400px;
-    width:600px;
-    display: block;
-    margin:0 auto;
-    background-size: cover;
-    position: relative;
-    margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.content_post{
+  height:400px;
+  width:600px;
+  display: block;
+  margin:0 auto;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: 'Fredoka One', cursive;
+}
+.container{
+  color: green;
+}
+.on{
+  text-decoration: none;
+  background-color: aquamarine;
+  font-family: 'Fredoka One', cursive;
+  a{
+    text-decoration: none;
   }
+}
+.contents.row.fix{
+  // height:calc(100vh - 60px );
 }
 
 .contents2 {
@@ -141,6 +159,7 @@
   border-bottom: 1px solid #eee;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Fredoka One', cursive;
 }
 .nav > li:hover > a {/*layer-1*/
   color: orange;
@@ -177,38 +196,40 @@
   color: pink;
   background: #afc6e2;
 }
-.content {
-  width: 600px;
-  height: 250px;
-  background: #eee;
-  margin: 0;
-  padding: 10px;
-  text-align: left;
-  box-sizing: border-box;
-}
 
 .info{
   color: blue;
   text-align: center;
   display: flex;
-  justify-content: space-evenly;
-  .span.name{
-    color: black;
-  }
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
+.name a{
+    color: black;
+    font-size: 15px;
+    font-family: "Nico Moji"; 
+    text-decoration: none;
+    padding-right: 5px;
+  }
 .info p{
   color: black;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
 .footer {
   background-color: black;
   bottom: 10px;
-  height: 60px;
+  height: 64px;
   text-align: center;
   left: 0;
   right: 0;
+  line-height: 4;
   p{
     color: white;
+    font-family: 'Fredoka One', cursive;
   }
 }
 
@@ -216,83 +237,38 @@
   background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
   background-size: cover;
 }
-// .content_post{
-//   height:400px;
-//   width:600px;
-//   display: block;
-//   margin:0 auto;
-//   background-size: cover;
-//   position: relative;
-//   margin-bottom: 30px;
-//   h2 {
-//     font-weight: normal;
-//     strong {
-//       font-weight: bold;
-//       padding-right: 5px;
-//       font-size: 1.2em;
-//     }
-//   }
-  // .new_user{
-  // font-family: "游ゴシック", "YuGothic";
-  // }
-  // &__post {
-  //   position: relative;
-  //   height: 400px;
-  //   color: #fff;
-  //   margin-left: 10%;
-  //   margin-right: 10%;
-  //   background-position: center center;
-  //   border-radius: 3px;
-  //   box-shadow: 0 0 10px rgba(black,0.2);
-  //   &:after {
-  //     content: '';
-  //     position: absolute;
-  //     top: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     right: 0;
-  //     z-index: 1;
-  //     border-radius: 3px;
-  //   }
-      
-      
-    // p {
-    //   position: absolute;
-    //   left: 30px;
-    //   right: 100px;
-    //   bottom: 30px;
-    //   margin: 0;
-    //   font-size: 20px;
-    //   z-index: 2;
-    //   font-weight: bold;
-    //   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-    // }
-   .username{
-      float:right;
-      z-index: 2;
-      font-size: 13px;
+.on{
+  text-align: center;
+}
+.username{
+  float:right;
+  z-index: 2;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
     
-      a {
-        display: block;
-        color: #aaa;
-        &:hover {
-          text-decoration: underline;
-          color: #aaa;
-        }
-      }
-      span {
-        font-size: 9px;
-        display: block;
+  a {
+    display: block;
+    color: #aaa;
+    font-family: 'Fredoka One', cursive;
+    &:hover {
+      text-decoration: underline;
+      color: #aaa;
       }
     }
+    span {
+      font-size: 9px;
+      display: block;
+    }
+  }
   
 
   // create.html.haml対応
   .success {
     box-shadow: 0 0 10px rgba(black,0.2);
-    background-color: white;
+    background-color:rgb(0, 217, 255);
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Fredoka One', cursive;
     h3 {
       color: darkblue;
     }
@@ -304,24 +280,28 @@ form {
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
-    color: dark;
+    color: white;
     font-family: "游ゴシック", "YuGothic";
   }
+  .field{
+    text-align: center;
+  }
   input,textarea {
-    width: 100%;
+    width: 500px;
     border: 1px solid gray;
     border-radius: 15px;
     font-family: "游ゴシック", "YuGothic";
     border: double;
   }
   input[type="submit"] {
-    background-color: accent;
+    background-color: black;
     border-radius: 15px;
-    color: black;
+    color: blanchedalmond;
     border: 0;
     font-size: 18px;
     border: double;
     font-family: "游ゴシック", "YuGothic";
+    width: 300px;
     &:hover {
       background-color: lawngreen;
     }
@@ -335,18 +315,45 @@ form {
     box-sizing: border-box;
     margin: auto;
     width: 800px;
-    background-color: black;
     border-radius: 10px;
   }
 }
+.contents.row {
+  background-color:cornsilk;
+  width: 100%;
+  margin: auto;
+  // height: 100vh;
+}
 
+.new{
+  height: 100vh;
+  text-align: center;
+}
+
+.show{
+ 
+}
+
+.destroy{
+  height: 100vh;
+}
+
+.update{
+  height: 100vh;
+}
+
+.create{
+  height: 100vh;
+}
 
 // コメント機能ページ
 .comments {
   padding: 5px;
   margin-top: 15px;
+  font-family: 'Concert One', cursive;
   a {
     color: accent;
+    font-family: 'Concert One', cursive;
     &:hover {
       text-decoration: underline;
     }
@@ -356,16 +363,119 @@ form {
 .search-form {
   text-align: center;
   padding-top: 32px;
-  background-color: black;
+  background-color: cornsilk;
+  font-family: 'Fredoka One', cursive;
   .search-input {
     width: 30%;
     margin-right: 10px;
     border: double;
+    text-align: center;
   }
 
   .search-btn {
     width: 10%;
+    font-family: 'Fredoka One', cursive;
   }
 }
 
+.pagination{
+font-weight: 800;
+color: cadetblue;
+background-color: cornsilk;
+}
+.pegination a{
+  text-decoration: none;
+  color:inherit;
+}
 
+.page a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.next a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.last a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.info{
+  background-color:#9fb7d4;
+  opacity: 0.7;
+}
+
+.touroku{
+  height: 100vh;
+}
+
+.login{
+  height: 100vh;
+}
+.mojiinfo{
+  text-align: center;
+  margin-left: 520px;
+  .moji{
+    font-size: 100%;
+    font-weight: normal;
+    text-align: center;
+    border: solid crimson;
+    background-color: black;
+    width: 400px;
+  }
+}
+
+.rink{
+  text-align: center;
+  border: solid crimson;
+  margin: 20px 400px;
+  background-color: black;
+  a{
+    text-decoration: none;
+    color: blanchedalmond;
+  }
+}
+
+.actions{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toukouwaku{
+  margin-left: 350px;
+  margin-bottom: 10px;
+  .toukou{
+    color: blanchedalmond;
+    font-size: 100%;
+    font-weight: normal;
+    border: solid crimson;
+    background-color: black;
+    width: 400px;
+  }
+}
+
+.comment1{
+  text-align: center;
+}
+.comment2{
+  text-align: center;
+}
+
+.waku{
+  text-align: center;
+  .toukouwaku1{
+    margin-bottom: 10px;
+    margin-left: 210px;
+    .toukou1{
+      color: blanchedalmond;
+      font-size: 100%;
+      font-weight: normal;
+      border: solid crimson;
+      background-color: black;
+      width: 400px;
+    }
+  }
+}

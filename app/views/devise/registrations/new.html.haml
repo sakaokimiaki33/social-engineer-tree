@@ -1,7 +1,9 @@
-.contents.row
+.contents.touroku
   .container
-    %h2 ユーザー登録
-    %a{:href => "/tweets"} 投稿一覧
+    .mojiinfo
+      %h2.moji ユーザー登録
+    .rink
+      %a{:href => "/tweets"} 投稿一覧
     = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
       = devise_error_messages!
       .field

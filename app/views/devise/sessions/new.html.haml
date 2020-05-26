@@ -1,7 +1,9 @@
-.contents.row
+.contents.login
   .container
-    %h2 ログイン
-    %a{:href => "/tweets"} 投稿一覧
+    .mojiinfo
+      %h2.moji ログイン
+    .rink
+      %a{:href => "/tweets"} 投稿一覧
     = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
       .field
         = f.label :アドレス
