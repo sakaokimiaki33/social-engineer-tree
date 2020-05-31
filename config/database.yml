@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: social-engineer-tree_production
-  username: social-engineer-tree
-  password: <%= ENV['SOCIAL-ENGINEER-TREE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
