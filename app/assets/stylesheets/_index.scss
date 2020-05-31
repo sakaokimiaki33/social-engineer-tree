@@ -9,13 +9,18 @@
       width: 100%;
       overflow: hidden;
     }
-  
+    
     li {
-      float: left;
+      float: right;
       width: 25%;
       list-style-type: none;
     }
-  
+    .title{
+      font-size: 30px;
+      margin-top: 10px;
+      margin-left: 25px;
+      color: cornsilk;
+    }
     a {
       display: block;
       padding: 20px 0;

@@ -38,9 +38,9 @@
       %h4 ＜コメント一覧＞
       - if @comments
         - @comments.each do |comment|
-          %p
-            %strong
+          %strong
             = link_to comment.user.nickname, "/users/#{comment.user_id}"
-          ：
-          = comment.text
+          %p
+            ：
+            = comment.text
 = render "footer" 

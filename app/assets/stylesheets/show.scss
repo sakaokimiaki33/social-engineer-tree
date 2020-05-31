@@ -1,3 +1,8 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 // index.html.haml対応
 .header {
   border-bottom: 1px solid gray;
@@ -292,6 +297,7 @@ form {
     border-radius: 15px;
     font-family: "游ゴシック", "YuGothic";
     border: double;
+    text-align: center;
   }
   input[type="submit"] {
     background-color: black;
@@ -330,9 +336,6 @@ form {
   text-align: center;
 }
 
-.show{
- 
-}
 
 .destroy{
   height: 100vh;
@@ -445,7 +448,7 @@ background-color: cornsilk;
 }
 
 .toukouwaku{
-  margin-left: 350px;
+  margin-left: 520px;
   margin-bottom: 10px;
   .toukou{
     color: blanchedalmond;

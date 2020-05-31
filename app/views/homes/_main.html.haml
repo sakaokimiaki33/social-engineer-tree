@@ -1,17 +1,13 @@
 .header
   %ul
     %li
-      %a{:href => "contacts/contact"} コンタクト
-    %li
-      %a{:href => "#"} ポートフォリオ
-    %li
-      %a{:href => "forms/new"} 問い合わせ
-    %li
       %a{:href => "tweets"} 投稿
+    .title
+      Social-Engineer-Tree
 
 .main 
   .main__message 
-    エンジニアにとって便利なサイトの一覧
+    便利なサイトの一覧
   .main__btns
     = link_to "https://www.facebook.com/", class: "main__btns__btn  main__btns__btn--facebook"  do
       = icon('fa', 'facebook-square', class: "main__btns__btn--icon")

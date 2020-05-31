@@ -1,12 +1,13 @@
 $(function () {
   function buildHTML(comment) {
-    var html = `<p>
+    var html = `
                   <strong>
                     <a href=/users/${comment.user_id}>${comment.user_name}</a>
-                    :
                   </strong>
-                  ${comment.text}
-                </p>`
+                <p>
+                ：${comment.text}
+                </p>
+                `
     return html;
   }
   $('#new_comment').on('submit', function (e) {
